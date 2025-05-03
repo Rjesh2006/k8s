@@ -5,7 +5,7 @@ Welcome to this comprehensive Kubernetes learning repository! 🌐
 Here, we dive deep into mastering Kubernetes using both **Minikube** and **KIND (Kubernetes in Docker)**. This repo will serve as a central hub for everything related to Kubernetes, including:
 
 - Deployments
-- Services
+- Services 
 - ConfigMaps
 - Secrets
 - StatefulSets
