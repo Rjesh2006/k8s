@@ -42,30 +42,32 @@ To run the Laravel web application locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/krishna1632/study_material_app.git
-cd study-material-app
-
+  git clone https://github.com/krishna1632/study_material_app.git
+  cd study-material-app
+# install php
+   install php 
 # Install backend dependencies
-composer install
+   composer install
 
 # Setup environment
-cp .env.example .env
-php artisan key:generate
+   cp .env.example .env
+   php artisan key:generate
 
 # Database setup (SQLite)
 # Laravel will prompt you to create the SQLite file - type 'Yes' when asked:
 # "The SQLite database configured for this application does not exist. Would you like to create it? (Yes/No)"
-touch database/database.sqlite
+ #and if wann to crate this manually do it by this given follows extension file
+  touch database/database.sqlite
 
 # Run migrations and seed data
-php artisan migrate
-php artisan db:seed
+  php artisan migrate
+  php artisan db:seed
 
 # Install frontend dependencies
-npm install
-npm run dev
+  npm install
+  npm run dev
 
 # Start the development server
-php artisan serve
+  php artisan serve
 
 
