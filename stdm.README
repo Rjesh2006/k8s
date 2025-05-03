@@ -1,0 +1,35 @@
+## 🚀 Project Setup Instructions
+
+To run this Laravel web application locally, follow these steps:
+
+### ✅ Steps to Run the App
+```bash
+git clone https://github.com/krishna1632/study_material_app.git
+cd study-material-app
+
+# Install backend dependencies
+composer install
+
+# Copy environment file and generate app key
+cp .env.example .env
+php artisan key:generate
+
+# Create SQLite database file if it doesn't exist
+# Laravel will prompt you to create the SQLite file, just type 'Yes' when asked:
+# "The SQLite database configured for this application does not exist. Would you like to create it? (Yes/No)"
+touch database/database.sqlite
+
+# Update .env to use SQLite
+# DB_CONNECTION=sqlite
+# DB_DATABASE=/absolute/path/to/database/database.sqlite
+
+# Run migrations and seed the database
+php artisan migrate
+php artisan db:seed
+
+# Install frontend dependencies and build assets
+npm install
+npm run dev
+
+# Start the server
+php artisan serve
