@@ -116,3 +116,55 @@ spec:
   - name: main-app
     image: myapp:latest
 
+# 📦 CRDs Created During Istio Installation  
+When you install Istio, it automatically adds several **Custom Resource Definitions (CRDs)** to extend Kubernetes.  
+
+| CRD Kind               | Purpose                                                                 |
+|------------------------|-------------------------------------------------------------------------|
+| `VirtualService`       | Defines smart routing rules (e.g., traffic splitting, retries, timeouts) |
+| `DestinationRule`      | Configures subsets, traffic policies (e.g., load balancing, TLS settings) |
+| `Gateway`              | Manages ingress/egress traffic for the mesh                              |
+| `ServiceEntry`         | Allows external services to be part of the mesh (e.g., APIs, databases)  |
+| `Sidecar`              | Configures sidecar proxy behavior for workloads                         |
+| `PeerAuthentication`   | Enables **mTLS** (mutual TLS) for service-to-service communication      |
+| `AuthorizationPolicy`  | Defines access control rules (e.g., RBAC, deny/allows)                  |
+| `Telemetry`            | Customizes metrics, logs, and tracing configurations                    |
+| `EnvoyFilter`          | Modifies low-level Envoy proxy behavior (advanced use cases)            |
+| `WasmPlugin`           | Adds WebAssembly (WASM) filters to Envoy proxies                        |
+| `WorkloadEntry`        | Registers VMs or bare-metal workloads into the mesh                     |
+| `WorkloadGroup`        | Groups configuration for external workloads (e.g., VM templates)        |
+
+### Example YAML Snippets  
+```yaml
+# Example VirtualService
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: reviews-route
+spec:
+  hosts:
+    - reviews
+  http:
+    - route:
+        - destination:
+            host: reviews
+            subset: v1
+          weight: 80
+        - destination:
+            host: reviews
+            subset: v2
+          weight: 20
+```
+
+```yaml
+# Example PeerAuthentication (mTLS)
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: default
+spec:
+  mtls:
+    mode: STRICT
+```
+
+> **Note**: Run `kubectl get crds | grep istio.io` to see all Istio CRDs installed in your cluster.  
