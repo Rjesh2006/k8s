@@ -40,7 +40,6 @@ Welcome to this comprehensive repository containing both:
 
 To run the Laravel web application locally:
 
-```bash
 # Clone the repository
   git clone https://github.com/krishna1632/study_material_app.git
   cd study-material-app
@@ -70,4 +69,50 @@ To run the Laravel web application locally:
 # Start the development server
   php artisan serve
 
+
+# 📘 Kubernetes: Init & Sidecar Containers + Istio + mTLS + CRDs
+
+This document is a complete reference for understanding key Kubernetes and Istio concepts including:
+
+- Init Containers
+- Sidecar Containers
+- Istio Service Mesh
+- mTLS (Mutual TLS)
+- CRDs (Custom Resource Definitions)
+- Real-world examples and commands
+
+---
+
+## 🚀 Init Containers
+
+**Init containers** are special containers that run **before** the main container in a Pod starts.
+
+### 🔧 Use Cases:
+
+- Download dependencies
+- Perform setup (e.g., DB migrations)
+- Wait for other services to be ready
+- Ensure config or secrets are available
+
+### ✅ Key Features:
+
+- Always run to completion
+- Run sequentially
+- Separate from the main container
+
+### 🧪 Example:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-pod
+spec:
+  initContainers:
+  - name: init-myservice
+    image: busybox
+    command: ['sh', '-c', 'echo Waiting for DB... && sleep 10']
+  containers:
+  - name: main-app
+    image: myapp:latest
 
