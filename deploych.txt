@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete Web Programming Practicals</title>
+    <style>
+        /* CSS for all practicals */
+        .practical-container {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .practical-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        table.demo-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table.demo-table th, table.demo-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HTML Practical 1: Basic Formatting -->
+<div class="practical-container">
+    <h2 class="practical-title">HTML Practical 1: Basic Formatting</h2>
+    <h1 style="color: blue;">Main Heading</h1>
+    <p><b>Bold text</b>, <i>Italic text</i>, <u>Underlined text</u></p>
+    <p style="color: red; font-family: Arial; font-size: 20px;">Styled paragraph</p>
+    <p>Normal paragraph with<br>line break</p>
+    <hr>
+    <marquee behavior="scroll" direction="left">Scrolling text</marquee>
+</div>
+
+<!-- HTML Practical 2: Lists -->
+<div class="practical-container">
+    <h2 class="practical-title">HTML Practical 2: Ordered and Unordered Lists</h2>
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+</div>
+
+<!-- HTML Practical 3: Images -->
+<div class="practical-container">
+    <h2 class="practical-title">HTML Practical 3: Images in Webpages</h2>
+    <h3>Logo</h3>
+    <img src="https://via.placeholder.com/200x100" alt="Company Logo" width="200">
+
+    <h3>Image in Table</h3>
+    <table border="1">
+        <tr>
+            <td><img src="https://via.placeholder.com/100x50" alt="Product 1" width="100"></td>
+            <td>Product 1</td>
+        </tr>
+    </table>
+
+    <h3>Clickable Icon</h3>
+    <a href="https://example.com">
+        <img src="https://via.placeholder.com/50x50" alt="Clickable Icon" width="50">
+    </a>
+</div>
+
+<!-- HTML Practical 4: Linking -->
+<div class="practical-container">
+    <h2 class="practical-title">HTML Practical 4: Internal and External Linking</h2>
+    <h1 id="top">Links Example</h1>
+    
+    <h3>External Links</h3>
+    <a href="https://www.google.com">Visit Google</a>
+    
+    <h3>Internal Links</h3>
+    <a href="#section1">Jump to Section 1</a><br>
+    <a href="#section2">Jump to Section 2</a>
+    
+    <div style="height: 100px; background: #f0f0f0; margin: 10px 0;"></div>
+    
+    <h3 id="section1">Section 1</h3>
+    <p>Content for section 1</p>
+    <a href="#top">Back to Top</a>
+    
+    <div style="height: 100px; background: #f0f0f0; margin: 10px 0;"></div>
+    
+    <h3 id="section2">Section 2</h3>
+    <p>Content for section 2</p>
+    <a href="#top">Back to Top</a>
+</div>
+
+<!-- HTML Practical 5: Tables -->
+<div class="practical-container">
+    <h2 class="practical-title">HTML Practical 5: Table Demonstration</h2>
+    <table class="demo-table">
+        <tr>
+            <th rowspan="2">Day</th>
+            <th colspan="2">Schedule</th>
+            <th rowspan="2">Topic</th>
+        </tr>
+        <tr>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td>8:00 AM</td>
+            <td>5:00 PM</td>
+            <td>Important HTML Tags</td>
+        </tr>
+        <tr>
+            <td>8:00 AM</td>
+            <td>5:00 PM</td>
+            <td>Important HTML Tags</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td>8:00 AM</td>
+            <td>11:00 AM</td>
+            <td>Introduction to HTML</td>
+        </tr>
+        <tr>
+            <td>11:00 AM</td>
+            <td>2:00 PM</td>
+            <td>CSS-1</td>
+        </tr>
+        <tr>
+            <td>2:00 PM</td>
+            <td>5:00 PM</td>
+            <td>JavaScript-1</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>8:00 AM</td>
+            <td>12 Noon</td>
+            <td>JavaScript-2</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>1:00 PM</td>
+            <td>3:00 PM</td>
+            <td>Valedictory</td>
+        </tr>
+    </table>
+</div>
+
+<!-- HTML Practical 6: Semantic Tags -->
+<div class="practical-container">
+    <h2 class="practical-title">HTML Practical 6: Semantic Tags</h2>
+    <header style="background: #3498db; color: white; padding: 10px;">
+        <h1>Website Header</h1>
+    </header>
+    
+    <nav style="background: #2c3e50; padding: 10px;">
+        <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="display: inline; margin-right: 15px;"><a href="#" style="color: white; text-decoration: none;">Home</a></li>
+            <li style="display: inline;"><a href="#" style="color: white; text-decoration: none;">About</a></li>
+        </ul>
+    </nav>
+    
+    <main style="padding: 15px;">
+        <section style="margin-bottom: 20px;">
+            <h2>Main Content Section</h2>
+            <article style="background: #f9f9f9; padding: 10px;">
+                <p>Article content goes here.</p>
+            </article>
+        </section>
+        
+        <details style="margin-bottom: 20px;">
+            <summary>Click for details</summary>
+            <p>Hidden details shown when clicked.</p>
+        </details>
+        
+        <figure style="text-align: center;">
+            <img src="https://via.placeholder.com/400x200" alt="Example image" style="max-width: 100%;">
+            <figcaption>Figure caption</figcaption>
+        </figure>
+    </main>
+    
+    <footer style="background: #34495e; color: white; padding: 10px; text-align: center;">
+        <p>Website footer content</p>
+    </footer>
+</div>
+
+<!-- HTML Practical 7: Student Registration Form -->
+<div class="practical-container">
+    <h2 class="practical-title">HTML Practical 7: Student Registration Form</h2>
+    <form id="registrationForm" style="max-width: 500px;">
+        <h3>Student Registration</h3>
+        
+        <label style="display: block; margin-top: 10px;">Roll Number (7 digits):</label>
+        <input type="text" pattern="\d{7}" required style="width: 100%; padding: 8px;">
+        
+        <label style="display: block; margin-top: 10px;">Full Name:</label>
+        <input type="text" required style="width: 100%; padding: 8px;">
+        
+        <label style="display: block; margin-top: 10px;">Date of Birth:</label>
+        <input type="date" required style="width: 100%; padding: 8px;">
+        
+        <label style="display: block; margin-top: 10px;">Department:</label>
+        <select required style="width: 100%; padding: 8px;">
+            <option value="">Select</option>
+            <option>Computer Science</option>
+            <option>Mathematics</option>
+        </select>
+        
+        <label style="display: block; margin-top: 10px;">Gender:</label>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female"> Female
+        
+        <label style="display: block; margin-top: 10px;">Interests:</label>
+        <input type="checkbox"> Programming
+        <input type="checkbox"> Sports
+        
+        <label style="display: block; margin-top: 10px;">Address:</label>
+        <textarea rows="4" style="width: 100%; padding: 8px;"></textarea>
+        
+        <div style="margin-top: 20px;">
+            <input type="reset" value="Reset" style="padding: 8px 15px; margin-right: 10px;">
+            <input type="submit" value="Submit" style="padding: 8px 15px; background: #3498db; color: white; border: none;">
+        </div>
+    </form>
+    <script>
+        document.getElementById('registrationForm').onsubmit = function() {
+            alert("Form submitted");
+            return false; // Prevent actual form submission for demo
+        };
+    </script>
+</div>
+
+<!-- CSS Practical 1: Department Website -->
+<div class="practical-container">
+    <h2 class="practical-title">CSS Practical 1: Department Website with Dropdown</h2>
+    <nav style="background: #333;">
+        <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="display: inline-block; position: relative;">
+                <a href="#" style="color: white; display: block; padding: 15px 20px; text-decoration: none;">Home</a>
+            </li>
+            <li class="dropdown" style="display: inline-block; position: relative;">
+                <a href="#" style="color: white; display: block; padding: 15px 20px; text-decoration: none;">Faculty</a>
+                <div class="dropdown-content">
+                    <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Professors</a>
+                    <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Associate Professors</a>
+                </div>
+            </li>
+            <li class="dropdown" style="display: inline-block; position: relative;">
+                <a href="#" style="color: white; display: block; padding: 15px 20px; text-decoration: none;">Courses</a>
+                <div class="dropdown-content">
+                    <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Undergraduate</a>
+                    <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Postgraduate</a>
+                </div>
+            </li>
+            <li style="display: inline-block; position: relative;">
+                <a href="#" style="color: white; display: block; padding: 15px 20px; text-decoration: none;">Activities</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div id="main-content" style="padding: 20px;">
+        <h1>Welcome to Our Department</h1>
+        <p>Department information goes here...</p>
+    </div>
+</div>
+
+<!-- JavaScript Practical 1: Multiplication Table -->
+<div class="practical-container">
+    <h2 class="practical-title">JavaScript Practical 1: Multiplication Table</h2>
+    <button onclick="generateTable()" style="padding: 8px 15px; background: #3498db; color: white; border: none;">
+        Generate Multiplication Table
+    </button>
+    <div id="multiplicationTable" style="margin-top: 15px;"></div>
+    <script>
+        function generateTable() {
+            let num = parseInt(prompt("Enter a number:"));
+            let output = "";
+            for(let i = 1; i <= 10; i++) {
+                output += `${num} x ${i} = ${num * i}<br>`;
+            }
+            document.getElementById('multiplicationTable').innerHTML = output;
+        }
+    </script>
+</div>
+
+<!-- JavaScript Practical 2: Calculator -->
+<div class="practical-container">
+    <h2 class="practical-title">JavaScript Practical 2: Calculator</h2>
+    <div style="max-width: 300px;">
+        <input type="number" id="num1" placeholder="First Number" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+        <input type="number" id="num2" placeholder="Second Number" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+            <button onclick="calculate('+')" style="padding: 8px; background: #2ecc71; color: white; border: none;">+</button>
+            <button onclick="calculate('-')" style="padding: 8px; background: #e74c3c; color: white; border: none;">-</button>
+            <button onclick="calculate('*')" style="padding: 8px; background: #3498db; color: white; border: none;">*</button>
+            <button onclick="calculate('/')" style="padding: 8px; background: #f39c12; color: white; border: none;">/</button>
+        </div>
+    </div>
+    <script>
+        function calculate(operator) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+            
+            switch(operator) {
+                case '+': result = num1 + num2; break;
+                case '-': result = num1 - num2; break;
+                case '*': result = num1 * num2; break;
+                case '/': result = num1 / num2; break;
+            }
+            
+            alert(`Result: ${result}`);
+        }
+    </script>
+</div>
+
+<!-- JavaScript Practical 3: Focus Background -->
+<div class="practical-container">
+    <h2 class="practical-title">JavaScript Practical 3: Change Background on Focus</h2>
+    <input type="text" id="focusDemo" placeholder="Click here to see effect" 
+           style="padding: 8px; width: 300px;">
+    <script>
+        const inputField = document.getElementById('focusDemo');
+        inputField.onfocus = function() {
+            this.style.backgroundColor = 'yellow';
+        };
+        inputField.onblur = function() {
+            this.style.backgroundColor = 'white';
+        };
+    </script>
+</div>
+
+<!-- JavaScript Practical 4: Form Validation -->
+<div class="practical-container">
+    <h2 class="practical-title">JavaScript Practical 4: Form Validation</h2>
+    <form id="validatedForm" style="max-width: 500px;">
+        <h3>Student Registration with Validation</h3>
+        
+        <label style="display: block; margin-top: 10px;">Roll Number (7 digits):</label>
+        <input type="text" id="rollNo" style="width: 100%; padding: 8px;">
+        
+        <label style="display: block; margin-top: 10px;">Full Name:</label>
+        <input type="text" id="name" style="width: 100%; padding: 8px;">
+        
+        <label style="display: block; margin-top: 10px;">Date of Birth:</label>
+        <input type="date" id="dob" style="width: 100%; padding: 8px;">
+        
+        <input type="submit" value="Submit" 
+               style="margin-top: 15px; padding: 8px 15px; background: #3498db; color: white; border: none;">
+    </form>
+    <script>
+        document.getElementById('validatedForm').onsubmit = function() {
+            // Roll number validation
+            const rollNo = document.getElementById('rollNo').value;
+            if (!/^\d{7}$/.test(rollNo)) {
+                alert("Roll number must be 7 digits");
+                return false;
+            }
+            
+            // Name validation
+            const name = document.getElementById('name').value;
+            if (!/^[a-zA-Z ]+$/.test(name)) {
+                alert("Name must contain only letters");
+                return false;
+            }
+            
+            // DOB validation
+            const dob = document.getElementById('dob').value;
+            if (!dob) {
+                alert("Date of birth is required");
+                return false;
+            }
+            
+            alert("Form submitted successfully");
+            return false; // Prevent actual form submission for demo
+        };
+    </script>
+</div>
+
+<!-- jQuery Practical 1: Change Text -->
+<div class="practical-container">
+    <h2 class="practical-title">jQuery Practical 1: Change Text Color and Content</h2>
+    <p id="textElement">Original text</p>
+    <button id="changeBtn" style="padding: 8px 15px; background: #3498db; color: white; border: none;">
+        Change Text
+    </button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#changeBtn").click(function() {
+                $("#textElement").css("color", "red").text("Text changed!");
+            });
+        });
+    </script>
+</div>
+
+<!-- jQuery Practical 2: Element Selection -->
+<div class="practical-container">
+    <h2 class="practical-title">jQuery Practical 2: Element Selection</h2>
+    <p id="para1">Paragraph with ID</p>
+    <p class="highlight">Paragraph with class</p>
+    
+    <button id="idBtn" style="padding: 8px 15px; margin-right: 10px; background: #3498db; color: white; border: none;">
+        Select by ID
+    </button>
+    <button class="classBtn" style="padding: 8px 15px; background: #2ecc71; color: white; border: none;">
+        Select by Class
+    </button>
+    <script>
+        $(document).ready(function() {
+            $("#idBtn").click(function() {
+                alert($("#para1").text());
+            });
+            
+            $(".classBtn").click(function() {
+                $(".highlight").css("background", "yellow");
+            });
+        });
+    </script>
+</div>
+
+<!-- jQuery Practical 3: Weekend Check -->
+<div class="practical-container">
+    <h2 class="practical-title">jQuery Practical 3: Weekend Check</h2>
+    <input type="date" id="dateInput" style="padding: 8px; margin-right: 10px;">
+    <button id="checkBtn" style="padding: 8px 15px; background: #3498db; color: white; border: none;">
+        Check Weekend
+    </button>
+    <p id="result" style="margin-top: 10px;"></p>
+    <script>
+        $(document).ready(function() {
+            $("#checkBtn").click(function() {
+                const dateStr = $("#dateInput").val();
+                const date = new Date(dateStr);
+                const day = date.getDay();
+                
+                if (day === 0 || day === 6) {
+                    $("#result").text("It's a weekend!").css("color", "green");
+                } else {
+                    $("#result").text("It's a weekday").css("color", "blue");
+                }
+            });
+        });
+    </script>
+</div>
+
+<!-- jQuery Practical 4: Various Events -->
+<div class="practical-container">
+    <h2 class="practical-title">jQuery Practical 4: Various Events</h2>
+    <input type="text" id="textField" placeholder="Focus/blur here" style="padding: 8px; width: 300px; margin-bottom: 10px;"><br>
+    
+    <select id="dropdown" style="padding: 8px; margin-bottom: 10px;">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+    </select><br>
+    
+    <div id="clickDiv" style="cursor: pointer; padding: 10px; background: #f0f0f0; margin-bottom: 10px;">
+        Click or double click me
+    </div>
+    
+    <form id="myForm">
+        <input type="submit" value="Submit Form" style="padding: 8px 15px; background: #3498db; color: white; border: none;">
+    </form>
+    <script>
+        $(document).ready(function() {
+            $("#textField").focus(function() {
+                $(this).css("background", "yellow");
+            }).blur(function() {
+                $(this).css("background", "white");
+            });
+            
+            $("#dropdown").change(function() {
+                alert("Value changed to: " + $(this).val());
+            });
+            
+            $("#clickDiv").click(function() {
+                $(this).css("color", "red");
+            }).dblclick(function() {
+                $(this).css("color", "blue");
+            });
+            
+            $("#myForm").submit(function(e) {
+                e.preventDefault();
+                alert("Form submitted!");
+            });
+        });
+    </script>
+</div>
+
+<!-- jQuery Practical 5: Mouse Events -->
+<div class="practical-container">
+    <h2 class="practical-title">jQuery Practical 5: MouseOver and MouseOut Events</h2>
+    <a href="https://collegewebsite.edu" id="myLink" 
+       style="display: inline-block; padding: 10px 15px; background: #3498db; color: white; text-decoration: none;">
+        It shows the mouse events
+    </a>
+    <script>
+        $(document).ready(function() {
+            $("#myLink").mouseover(function() {
+                $("body").css("background", "green");
+                $(this).text("I'm green now");
+            }).mouseout(function() {
+                $("body").css("background", "white");
+                $(this).text("I'm red now").css("background", "red");
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>
